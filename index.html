@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nithish G | Circuit Designer Portfolio</title>
+<meta name="description" content="Nithish G — Electrical & Electronics Engineering student and aspiring Circuit Designer.">
+<style>
+:root{--bg:#030712;--bg2:#07111f;--panel:rgba(10,22,39,.78);--text:#eef7ff;--muted:#91a5bb;--cyan:#45d8ff;--violet:#8b6cff;--green:#4dffa6;--line:rgba(140,180,220,.14);--shadow:0 30px 90px rgba(0,0,0,.35)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+body:before{content:"";position:fixed;inset:0;z-index:-3;background-image:linear-gradient(rgba(69,216,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(69,216,255,.035) 1px,transparent 1px);background-size:50px 50px}
+body:after{content:"";position:fixed;width:650px;height:650px;border-radius:50%;background:rgba(69,216,255,.08);filter:blur(100px);right:-250px;top:-180px;z-index:-2}
+.container{width:min(1160px,92%);margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(3,7,18,.72);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.35rem;font-weight:900;letter-spacing:.5px}.logo i{color:var(--cyan);font-style:normal}
+.links{display:flex;gap:25px;color:var(--muted);font-size:.9rem}.links a{transition:.2s}.links a:hover{color:var(--cyan)}
+.menu{display:none;color:var(--cyan);font-size:1.5rem}
+.hero{min-height:100vh;padding:130px 0 80px;display:flex;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:center}
+.kicker{display:inline-flex;align-items:center;gap:9px;padding:7px 12px;border:1px solid rgba(69,216,255,.24);border-radius:100px;color:var(--cyan);background:rgba(69,216,255,.06);font-size:.78rem;font-weight:800;letter-spacing:1.2px}
+.dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 15px var(--green)}
+h1{font-size:clamp(3.2rem,7vw,6.5rem);line-height:.94;letter-spacing:-4px;margin:25px 0}
+.grad{background:linear-gradient(100deg,#fff 5%,var(--cyan) 48%,#a18cff 90%);-webkit-background-clip:text;color:transparent}
+.hero-text{font-size:1.08rem;color:var(--muted);max-width:700px}
+.cta{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 19px;border-radius:11px;font-weight:800;border:1px solid var(--line);transition:.25s}
+.primary{background:linear-gradient(100deg,var(--violet),#238cff);border:0;box-shadow:0 10px 35px rgba(91,93,255,.22)}
+.primary:hover{transform:translateY(-2px)}.ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+.hero-card{position:relative;background:linear-gradient(145deg,rgba(14,31,53,.95),rgba(5,14,27,.88));border:1px solid var(--line);border-radius:25px;padding:28px;box-shadow:var(--shadow);overflow:hidden}
+.hero-card:before{content:"";position:absolute;inset:-1px;background:linear-gradient(120deg,transparent,rgba(69,216,255,.14),transparent);transform:translateX(-100%);animation:sweep 5s infinite}
+@keyframes sweep{55%,100%{transform:translateX(100%)}}
+.avatar{height:120px;width:120px;border-radius:25px;display:grid;place-items:center;font-size:2.5rem;font-weight:950;background:linear-gradient(135deg,var(--violet),var(--cyan));box-shadow:0 0 55px rgba(69,216,255,.18);margin-bottom:20px}
+.hero-card h3{font-size:1.45rem}.role{color:var(--cyan);font-size:.9rem;margin:3px 0 20px}
+.metric{display:flex;justify-content:space-between;padding:13px 0;border-top:1px solid var(--line);font-size:.9rem}.metric span:first-child{color:var(--muted)}.metric strong{color:#fff}
+.chip-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:19px}.chip{font-size:.74rem;padding:6px 9px;border-radius:8px;background:rgba(255,255,255,.045);border:1px solid var(--line);color:#c9d7e6}
+section{padding:105px 0}.section-top{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:40px}.eyebrow{color:var(--cyan);font-weight:900;letter-spacing:2.5px;text-transform:uppercase;font-size:.72rem}.section-top h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-1.5px;margin-top:7px}.section-top p{color:var(--muted);max-width:550px}
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:0 15px 60px rgba(0,0,0,.12)}.panel p{color:var(--muted)}.panel p+p{margin-top:16px}
+.focus{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}.focus div{padding:15px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.025)}.focus b{display:block;font-size:.9rem}.focus span{color:var(--muted);font-size:.77rem}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.skill{position:relative;overflow:hidden}.skill:after{content:"";position:absolute;left:0;bottom:0;height:2px;width:55%;background:linear-gradient(90deg,var(--cyan),var(--violet))}.skill-icon{font-size:1.4rem;margin-bottom:12px}.skill h3{font-size:1rem}.skill p{color:var(--muted);font-size:.84rem;margin-top:5px}.level{height:5px;background:#14263a;border-radius:20px;margin-top:16px;overflow:hidden}.level i{display:block;height:100%;width:var(--w);background:linear-gradient(90deg,var(--cyan),var(--violet));border-radius:20px}
+.timeline{position:relative;border-left:1px solid #24405c;margin-left:10px;padding-left:35px}.event{position:relative;margin-bottom:32px}.event:last-child{margin-bottom:0}.event:before{content:"";position:absolute;width:11px;height:11px;border-radius:50%;background:var(--cyan);left:-41px;top:7px;box-shadow:0 0 20px var(--cyan)}.event h3{font-size:1.15rem}.event .tag{display:inline-block;color:var(--cyan);font-size:.76rem;margin:4px 0 8px}.event p{color:var(--muted);font-size:.92rem}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project{min-height:245px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.project:before{content:"";position:absolute;width:170px;height:170px;border-radius:50%;right:-60px;top:-70px;background:rgba(69,216,255,.08);filter:blur(5px)}.project-num{font-size:.75rem;color:var(--cyan);font-weight:900;letter-spacing:2px}.project h3{font-size:1.35rem;margin:10px 0}.project p{color:var(--muted);font-size:.88rem}.project .tech{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}.tech span{font-size:.72rem;padding:5px 8px;border:1px solid var(--line);border-radius:7px;color:#c8d5e4}
+.achievements{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.achievement{text-align:left}.big{font-size:2.5rem;font-weight:950;background:linear-gradient(90deg,var(--cyan),#a28cff);-webkit-background-clip:text;color:transparent}.achievement h3{margin:5px 0}.achievement p{color:var(--muted);font-size:.84rem}
+.edu{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.edu h3{font-size:1.05rem}.edu .year{color:var(--cyan);font-size:.8rem;margin:4px 0}.edu p{color:var(--muted);font-size:.88rem}
+.contact{padding-bottom:120px}.contact-box{position:relative;text-align:center;overflow:hidden;padding:65px 30px}.contact-box:before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(69,216,255,.07);filter:blur(70px)}.contact-box>*{position:relative}.contact-box h2{font-size:clamp(2.2rem,5vw,4rem);letter-spacing:-2px}.contact-box p{color:var(--muted);max-width:650px;margin:12px auto 25px}.contact-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:var(--muted);font-size:.82rem}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.reveal.show{opacity:1;transform:none}
+@media(max-width:850px){.links{display:none}.menu{display:block}.hero-grid,.about{grid-template-columns:1fr}.skills,.achievements{grid-template-columns:1fr 1fr}.projects,.edu{grid-template-columns:1fr}.hero{padding-top:110px}.section-top{display:block}.section-top p{margin-top:8px}}
+@media(max-width:540px){.skills,.achievements,.focus{grid-template-columns:1fr}.hero{padding-bottom:30px}section{padding:75px 0}h1{letter-spacing:-2.5px}.hero-card{padding:22px}}
+</style>
+</head>
+<body>
+<nav><div class="container nav">
+<a href="#home" class="logo">NITHISH<i>G</i>.</a>
+<div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a></div>
+<div class="menu">☰</div>
+</div></nav>
+
+<header class="hero" id="home">
+<div class="container hero-grid">
+<div class="reveal">
+<div class="kicker"><span class="dot"></span> OPEN TO INTERNSHIPS & PROJECTS</div>
+<h1>Engineering ideas into <span class="grad">real hardware.</span></h1>
+<p class="hero-text">I’m <b>Nithish G</b> — a pre-final-year Electrical & Electronics Engineering student and aspiring <b>Circuit Designer</b>, focused on PCB development, electronics, simulation and reliable hardware systems.</p>
+<div class="cta"><a class="btn primary" href="#projects">Explore My Work →</a><a class="btn ghost" href="mailto:nithishganesan5@gmail.com">Get In Touch</a></div>
+</div>
+<div class="hero-card reveal">
+<div class="avatar">NG</div><h3>Nithish G</h3><div class="role">Aspiring Circuit Designer</div>
+<div class="metric"><span>Education</span><strong>B.E. EEE</strong></div>
+<div class="metric"><span>College</span><strong>Paavai Engineering</strong></div>
+<div class="metric"><span>CGPA</span><strong>8.78</strong></div>
+<div class="metric"><span>4th Sem Rank</span><strong>#1 • 9.05</strong></div>
+<div class="chip-row"><span class="chip">PCB Design</span><span class="chip">MATLAB</span><span class="chip">Python</span><span class="chip">BMS</span></div>
+</div>
+</div>
+</header>
+
+<section id="about"><div class="container">
+<div class="section-top reveal"><div><div class="eyebrow">01 — About</div><h2>Curious about circuits.<br>Serious about building.</h2></div><p>A hardware-focused engineering profile combining academic performance, technical communication and real industrial exposure.</p></div>
+<div class="about">
+<div class="panel reveal"><p>I am a pre-final-year B.E. Electrical and Electronics Engineering student at Paavai Engineering College. My primary interests are electronic circuit design, PCB development, battery management systems and hardware troubleshooting.</p><p>My internship at Super Auto Forge, Chennai gave me practical exposure to CNC operations, manufacturing workflows, inspection and testing. That experience taught me how precision, quality and process discipline influence real engineering outcomes.</p></div>
+<div class="panel reveal"><div class="eyebrow">What I Bring</div><div class="focus"><div><b>Hardware Mindset</b><span>Design → Build → Test</span></div><div><b>Problem Solving</b><span>Analyze & improve</span></div><div><b>Leadership</b><span>Coordinate & deliver</span></div><div><b>Communication</b><span>Present technical ideas</span></div></div></div>
+</div></div></section>
+
+<section id="skills"><div class="container">
+<div class="section-top reveal"><div><div class="eyebrow">02 — Skills</div><h2>My technical toolkit.</h2></div><p>Focused on skills that support circuit development, analysis and practical engineering.</p></div>
+<div class="skills">
+<div class="panel skill reveal"><div class="skill-icon">◈</div><h3>PCB Design</h3><p>Basic schematic and PCB development with attention to practical board design.</p><div class="level"><i style="--w:78%"></i></div></div>
+<div class="panel skill reveal"><div class="skill-icon">⌘</div><h3>Python</h3><p>Programming, automation concepts and engineering problem solving.</p><div class="level"><i style="--w:70%"></i></div></div>
+<div class="panel skill reveal"><div class="skill-icon">∿</div><h3>MATLAB</h3><p>Engineering computation, analysis and simulation-oriented work.</p><div class="level"><i style="--w:72%"></i></div></div>
+<div class="panel skill reveal"><div class="skill-icon">⚙</div><h3>CNC Operations</h3><p>Hands-on industrial exposure through manufacturing internship.</p><div class="level"><i style="--w:68%"></i></div></div>
+<div class="panel skill reveal"><div class="skill-icon">⚡</div><h3>Battery Systems</h3><p>Strong interest in BMS, EV batteries and smart charging concepts.</p><div class="level"><i style="--w:75%"></i></div></div>
+<div class="panel skill reveal"><div class="skill-icon">✓</div><h3>Testing & QC</h3><p>Understanding of inspection, testing and quality-focused production.</p><div class="level"><i style="--w:66%"></i></div></div>
+</div></div></section>
+
+<section id="experience"><div class="container">
+<div class="section-top reveal"><div><div class="eyebrow">03 — Experience</div><h2>From classroom to factory floor.</h2></div></div>
+<div class="panel timeline reveal">
+<div class="event"><h3>Industrial Intern — Super Auto Forge, Chennai</h3><div class="tag">MANUFACTURING • CNC • TESTING</div><p>Gained hands-on exposure to CNC machine operation, manufacturing processes, product testing and inspection procedures. Observed real production workflows and developed an understanding of precision, safety and process control.</p></div>
+<div class="event"><h3>Technical Paper Presenter</h3><div class="tag">RESEARCH • PRESENTATION • COMMUNICATION</div><p>Presented technical papers at various colleges, improving research preparation, technical explanation, public speaking and audience engagement.</p></div>
+</div></div></section>
+
+<section id="projects"><div class="container">
+<div class="section-top reveal"><div><div class="eyebrow">04 — Projects & Interests</div><h2>Where I want to build next.</h2></div><p>Selected technical directions based on my current learning and project interests.</p></div>
+<div class="projects">
+<div class="panel project reveal"><div><div class="project-num">PROJECT 01</div><h3>Hybrid Silicon–Carbon Smart BMS</h3><p>A concept for combining advanced battery technologies with intelligent monitoring, protection and charging control for EV applications.</p></div><div class="tech"><span>Battery Management</span><span>EV</span><span>Smart Charging</span></div></div>
+<div class="panel project reveal"><div><div class="project-num">PROJECT 02</div><h3>Energy-Efficient Hardware Systems</h3><p>Exploring electronic systems that monitor energy consumption and improve efficiency using sensing, control and data-driven decisions.</p></div><div class="tech"><span>EEE</span><span>IoT</span><span>Energy</span></div></div>
+<div class="panel project reveal"><div><div class="project-num">PROJECT 03</div><h3>PCB & Circuit Development</h3><p>Developing practical skills in schematic design, PCB layout, component selection, testing and troubleshooting.</p></div><div class="tech"><span>PCB</span><span>Circuits</span><span>Hardware</span></div></div>
+<div class="panel project reveal"><div><div class="project-num">PROJECT 04</div><h3>Motor Health Monitoring</h3><p>Interested in condition monitoring systems that use sensors and electronics to identify abnormal motor operating conditions.</p></div><div class="tech"><span>Sensors</span><span>Monitoring</span><span>Embedded</span></div></div>
+</div></div></section>
+
+<section id="education"><div class="container">
+<div class="section-top reveal"><div><div class="eyebrow">05 — Education</div><h2>Academic foundation.</h2></div></div>
+<div class="edu">
+<div class="panel reveal"><h3>B.E. Electrical & Electronics Engineering</h3><div class="year">Paavai Engineering College • Pre-Final Year</div><p>Current CGPA: <b>8.78</b></p></div>
+<div class="panel reveal"><h3>Higher Secondary Certificate</h3><div class="year">Government Boys Higher Secondary School • 2024</div><p>Score: <b>68%</b></p></div>
+<div class="panel reveal"><h3>SSLC</h3><div class="year">Government Boys Higher Secondary School • 2022</div><p>Score: <b>82%</b></p></div>
+<div class="panel reveal"><h3>Certifications</h3><div class="year">Technical</div><p>Basic PCB Design Certification<br>Junos Networking Certification</p></div>
+</div></div></section>
+
+<section><div class="container">
+<div class="section-top reveal"><div><div class="eyebrow">06 — Achievements</div><h2>Numbers that matter.</h2></div></div>
+<div class="achievements">
+<div class="panel achievement reveal"><div class="big">#1</div><h3>4th Semester Rank</h3><p>Secured 1st rank with a semester CGPA of 9.05.</p></div>
+<div class="panel achievement reveal"><div class="big">8.78</div><h3>Current CGPA</h3><p>Maintaining strong academic performance in B.E. EEE.</p></div>
+<div class="panel achievement reveal"><div class="big">EEE</div><h3>Career Direction</h3><p>Focused on circuit design, PCB development and hardware engineering.</p></div>
+</div></div></section>
+
+<section id="contact" class="contact"><div class="container">
+<div class="panel contact-box reveal"><div class="eyebrow">07 — Contact</div><h2>Let's build something useful.</h2><p>Open to internships, projects and career opportunities in circuit design, PCB design, electronics and hardware development.</p>
+<div class="contact-links"><a class="btn primary" href="mailto:nithishganesan5@gmail.com">✉ Email Nithish</a><a class="btn ghost" href="https://www.linkedin.com/in/nithish-g-3a783037b" target="_blank" rel="noopener noreferrer">in LinkedIn</a><a class="btn ghost" href="https://github.com/nithishg-engineer" target="_blank" rel="noopener noreferrer">⌘ GitHub</a></div></div>
+</div></section>
+
+<footer>© 2026 Nithish G • Electrical & Electronics Engineering • Aspiring Circuit Designer</footer>
+<script>
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
